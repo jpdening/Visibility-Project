@@ -12,3 +12,8 @@ All of the .csv files should look the same. For a given trajectory, the satellit
 
 The data in the body of the .csv files is pretty simple. It's just binary values, with a '1' signaling that a satellite is within the observation cone, and a '0' signalling that a satellite is outside of the observation cone. 
 
+*******************New Changes***********************************
+The .csv files reserved for each orbit are replaced by folders. Each folder now contains two .csv files entitled "earth_detection.csv" and "site_detection.csv". In the same manner as the old files, these document the instances when an event was detected. For the site_detection files, detections are the site detecting the satellite. For the earth_detection files, detections are the satellite being able to see the earth.
+
+In addition, two new files, "earth_visibility_percentages.csv" and "site_visibility_percentages.csv" were added. These document the percentage of the total sampled times that certain visibility conditions were met. For earth_visibility_percentages, this is the percentage of time that the earth is visible from the satellite, and for site_visibility_percentages this is the percentage of time the satellite is visible from the lunar ground site.
+
