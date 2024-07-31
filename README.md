@@ -17,3 +17,5 @@ The .csv files reserved for each orbit are replaced by folders. Each folder now 
 
 In addition, two new files, "earth_visibility_percentages.csv" and "site_visibility_percentages.csv" were added. These document the percentage of the total sampled times that certain visibility conditions were met. For earth_visibility_percentages, this is the percentage of time that the earth is visible from the satellite, and for site_visibility_percentages this is the percentage of time the satellite is visible from the lunar ground site.
 
+********************************New Changes, 7-30-2024********************************
+The position data was updated to account for the multiple phasings. New sub-folders (Example, Position_Data/LLO_1) were created. Each stores different files with position data sampled every 1 minute (dt = 1 minute), with these orbits propagated for one period from their initial phasing. Inside each sub-folder, a time vector is stored that is associated with all phasings in that folder.
