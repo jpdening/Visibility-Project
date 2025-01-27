@@ -40,6 +40,7 @@ Also at this level is a file called "site_locations_key.xls". This gives a list 
 6. Blue Ghost Mission 1
 7. Astrobotic Peregrine Mission 1
 8. Chang'e 5
+9. Chang'e 6
 
 ### ./AllConstellations/(n_blue, n_red, num. sites)/T_fin_##_dt_##_site_locs_(##)
 One hierarchy level down from this has folders of the form "T_fin_##_dt_##_site_locs_(##)". T_fin is the length of the simulation in hours, dt is the constant sampling interval in minutes, and the site_locs, are a list of 2-tuples of the form (site index, alpha), where alpha is the half angle of the observation cone.
@@ -64,5 +65,8 @@ Inside each "sat_#" file are "earth_detection.csv", "site_detection.csv", and "p
 For "earth_detection.csv", there are only two columns, with the first being the time column and the second being detections to Earth.
 
 For "position_data.csv", these are the positions relative to the center of the Earth in a rotating synodic frame. All positions start at the chosen phasing and go for one period of the orbit. The time column has an increment of one minute. The next three columns correspond to the x, y, and z positions respectively.
+
+# New Changes, 1-27-2025
+Added the "CLPSSitesRandomSats" folder. This includes visibility data for each randomly selected satellite with respect to all CLPS sites treated in this work. Inside the folder, there are sub-folders of the style **T_fin_##_dt_##_site_(##)**. The first argument is the length of the simulation in hours. The second argument is the time interval in minutes. The final argument is a tuple of the form (site index, alpha). The site index corresponds to the sites listed in "site_locations_key.xlsx", also inside the "CLPSSitesRandomSats" folder. 
 
 
